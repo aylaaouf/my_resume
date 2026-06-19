@@ -1,0 +1,185 @@
+%==============================================================
+% Ayoub Laaoufi — Backend & Systems Engineer Resume
+% Compile with: pdflatex Ayoub_Laaoufi_Resume.tex
+%==============================================================
+\documentclass[9pt, a4paper]{article}
+
+\usepackage[a4paper, top=0.45in, bottom=0.45in, left=0.5in, right=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+
+% ── Colors ────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{1A56A0}
+\definecolor{dark}{HTML}{1A1A2E}
+\definecolor{mid}{HTML}{444444}
+\definecolor{muted}{HTML}{888888}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  pdftitle={Ayoub Laaoufi - Backend \& Systems Engineer},
+  pdfauthor={Ayoub Laaoufi}
+}
+
+\pagestyle{empty}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+
+% ── Section style ─────────────────────────────────────────────
+\titleformat{\section}
+  {\color{accent}\bfseries\small\uppercase}
+  {}{0em}{}
+  [\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ── Bullet style ──────────────────────────────────────────────
+\newcommand{\ritem}{\item[\textcolor{accent}{\small\textbullet}]}
+\setlist[itemize]{
+  leftmargin=1.2em,
+  itemsep=0pt,
+  parsep=0pt,
+  topsep=1pt,
+  partopsep=0pt
+}
+
+% ── Project entry ─────────────────────────────────────────────
+\newcommand{\proj}[3]{%
+  \vspace{3pt}
+  {\small\textbf{\color{dark}#1}
+  \textcolor{accent}{\ ·\ \footnotesize#2}
+  \hfill{\footnotesize\color{muted}\textit{#3}}}\\[-3pt]
+}
+
+% ── Cert entry ────────────────────────────────────────────────
+\newcommand{\cert}[3]{%
+  \textcolor{accent}{\small$\bigstar$}\ {\small\textbf{\color{dark}#1}}\\
+  {\footnotesize\color{mid}#2}\\
+  {\footnotesize\color{muted}\textit{#3}}\vspace{2pt}
+}
+
+%==============================================================
+\begin{document}
+%==============================================================
+
+% ══════════════════════════════════════════════════════════════
+% HEADER
+% ══════════════════════════════════════════════════════════════
+\begin{center}
+  {\LARGE\bfseries\color{dark} Ayoub Laaoufi}\\[3pt]
+  {\normalsize\color{accent} Backend \& Systems Engineer}\\[4pt]
+  {\footnotesize\color{mid}
+    ayoub.laaoufi@hotmail.com
+    \textcolor{muted}{\ |\ }
+    +212 666 766 284
+    \textcolor{muted}{\ |\ }
+    Morocco
+  }\\[2pt]
+  {\footnotesize
+    \href{https://github.com/aylaaouf}{\textcolor{accent}{github.com/aylaaouf}}
+    \textcolor{muted}{\ |\ }
+    \href{https://www.linkedin.com/in/ayoub-laaoufi}{\textcolor{accent}{linkedin.com/in/ayoub-laaoufi}}
+  }
+\end{center}
+
+\vspace{1pt}
+{\color{accent}\hrule height 1pt}
+\vspace{3pt}
+
+% ══════════════════════════════════════════════════════════════
+% SUMMARY
+% ══════════════════════════════════════════════════════════════
+\section{Summary}
+{\small\color{mid}
+Software Engineer from 1337 School (42 Network) specializing in backend development, systems programming, and cloud infrastructure. Proficient in C/C++, Python/Django, Node.js, and TypeScript. Holds IBM Backend Engineering, AWS Solutions Architect, and CompTIA Linux+ certifications. Open-source contributor seeking backend internships and junior engineering roles.
+}
+
+% ══════════════════════════════════════════════════════════════
+% TECHNICAL SKILLS
+% ══════════════════════════════════════════════════════════════
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\color{accent}\footnotesize}p{2.3cm} >{\footnotesize\color{mid}}X@{}}
+  Languages       & C · C++ · Python · JavaScript · TypeScript · SQL · Bash \\[1pt]
+  Backend         & Node.js · Express.js · Django · REST APIs · JWT Auth · PostgreSQL · MariaDB \\[1pt]
+  Systems         & POSIX APIs · Sockets · Multithreading · HTTP/1.1 · CGI · Non-blocking I/O · poll() \\[1pt]
+  Cloud \& DevOps & Docker · Docker Compose · NGINX · Linux Administration · Cloud Architecture · Git \\
+\end{tabularx}
+
+% ══════════════════════════════════════════════════════════════
+% EDUCATION
+% ══════════════════════════════════════════════════════════════
+\section{Education}
+{\small\textbf{\color{dark}1337 Coding School}}
+{\small\textcolor{mid}{· 42 Network Partner · Ben Guerir, Morocco}}
+\hfill{\footnotesize\color{muted}\textit{2022 – 2026}}\\
+{\footnotesize\color{muted}\textit{Peer-to-peer engineering program — mastery through project delivery, peer review, and self-directed learning across systems, networking, algorithms, and DevOps.}}
+
+% ══════════════════════════════════════════════════════════════
+% PROJECTS
+% ══════════════════════════════════════════════════════════════
+\section{Projects}
+
+\proj{Webserv}{C++98 · Sockets · poll() · CGI}{2024 – 2025}
+\begin{itemize}
+  \ritem {\small Built a fully functional HTTP/1.1 web server from scratch in C++98 with a non-blocking \texttt{poll()}-based event loop, CGI execution, virtual host routing, file uploads, and an NGINX-style configuration parser.}
+\end{itemize}
+
+\proj{Inception}{Docker · NGINX · MariaDB · WordPress}{2024}
+\begin{itemize}
+  \ritem {\small Designed and deployed a multi-container infrastructure with Docker Compose, orchestrating NGINX (TLS), WordPress, and MariaDB with secure networking, secret management, and persistent volumes.}
+\end{itemize}
+
+\proj{ft\_transcendence \normalfont\footnotesize\textit{(Backend Lead)}}{Python · Django · REST APIs · JWT}{2024 – 2025}
+\begin{itemize}
+  \ritem {\small Led backend architecture for a real-time web app — built RESTful APIs, JWT auth, OAuth2 login, role-based authorization, and XSS/CSRF protection using Python and Django in a cross-functional team.}
+\end{itemize}
+
+\proj{Cloud 1}{Linux · SSH · Cloud Servers · Debian}{2024}
+\begin{itemize}
+  \ritem {\small Introduction to cloud servers — provisioned and configured a remote Linux server from scratch, covering SSH access, user management, firewall rules, and basic cloud service deployment.}
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════════
+% CERTIFICATIONS
+% ══════════════════════════════════════════════════════════════
+\section{Certifications}
+\begin{tabularx}{\linewidth}{@{} X X X @{}}
+  \cert{IBM Backend Engineering}
+       {Professional Certificate · Coursera / IBM}
+       {REST APIs, microservices, Django, Node.js, Docker, CI/CD, and cloud-native development.}
+  &
+  \cert{AWS Cloud Solutions Architect}
+       {Professional Certificate · Amazon Web Services}
+       {Cloud architecture, VPC, EC2, S3, IAM, serverless, and AWS best practices.}
+  &
+  \cert{CompTIA Linux+ (XK0-005)}
+       {Certification · CompTIA}
+       {Linux administration, shell scripting, system security, storage, and troubleshooting.}
+\end{tabularx}
+
+% ══════════════════════════════════════════════════════════════
+% OPEN SOURCE & ACHIEVEMENTS
+% ══════════════════════════════════════════════════════════════
+\section{Open Source \& Achievements}
+\begin{itemize}
+  \ritem {\small\textbf{Member, AllInOpenSource} — GitHub's global open-source inclusion program, contributing to collaborative development and the open-source community.}
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════════
+% LANGUAGES
+% ══════════════════════════════════════════════════════════════
+\section{Languages}
+\begin{center}
+  {\small\textbf{\color{dark}Arabic}\ \textcolor{muted}{(Native)}}
+  \quad\textcolor{accent}{·}\quad
+  {\small\textbf{\color{dark}English}\ \textcolor{muted}{(Professional)}}
+  \quad\textcolor{accent}{·}\quad
+  {\small\textbf{\color{dark}French}\ \textcolor{muted}{(Intermediate)}}
+\end{center}
+
+%==============================================================
+\end{document}
+%==============================================================
